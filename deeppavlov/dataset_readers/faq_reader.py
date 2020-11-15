@@ -49,7 +49,7 @@ class FaqDatasetReader(DatasetReader):
         x = data[x_col_name]
         y = data[y_col_name]
 
-        train_xy_tuples = [(x[i].strip(), y[i].strip()) for i in range(len(x))]
+        train_xy_tuples = [(x[i].str.strip(), y[i].str.strip()) for i in range(len(x))]
 
         dataset = dict()
         dataset["train"] = train_xy_tuples
